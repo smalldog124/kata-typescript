@@ -1,10 +1,25 @@
-import addition from './addition'
+import addition, { splitTextToNumber } from './addition'
+describe('Name of the group', () => {
 
-describe('Addition',()=>{
-    const expected = "10"
-    const text = "1plus2plus3plus4"
+    describe('Addition', () => {
+        it("Input 1plus2plus3plus4 should be 10", () => {
+            const expected = "10"
+            const text = "1plus2plus3plus4"
 
-    const actual = addition(text)
+            const actual = addition(text)
 
-    expect(actual).toEqual(expected)
-})
+            expect(actual).toEqual(expected)
+        })
+    })
+
+    describe('Split', () => {
+        it('Split string 1plus2plus3plus4 shoud be array number', () => {
+            const expected = [1, 2, 3, 4]
+            const text = "1plus2plus3plus4"
+
+            const actual = splitTextToNumber(text)
+
+            expect(actual).toEqual(expected)
+        });
+    })
+});
