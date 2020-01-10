@@ -1,8 +1,17 @@
 export default function Addition(text: string):string{
-    let sum = 0
     let numbers = splitTextToNumber(text)
-    for(const number of numbers){
-        sum += number
+    let operators = splitTextToOpertor(text)
+    let sum = numbers[0]
+    for(let i =0; i <= (operators.length);i++){
+        switch (operators[i]) {
+            case 'plus':
+                console.log(numbers[i])
+                sum += numbers[i+1]
+                break;
+            case 'minus':
+                sum -= numbers[i+1]
+                break;
+        }
     }
     return sum.toString()
 }
@@ -30,7 +39,6 @@ export function splitTextToOpertor(text : string):string[]{
     let oper : string = ''
     for (const char of arrayText){
         if (!regexp.test(char)){
-            // console.log(char)
             oper += char
         }else{
             operator.push(oper)
