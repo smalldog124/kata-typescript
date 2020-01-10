@@ -5,7 +5,6 @@ export default function Addition(text: string):string{
     for(let i =0; i <= (operators.length);i++){
         switch (operators[i]) {
             case 'plus':
-                console.log(numbers[i])
                 sum += numbers[i+1]
                 break;
             case 'minus':
