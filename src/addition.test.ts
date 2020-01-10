@@ -12,6 +12,17 @@ describe('Name of the group', () => {
         })
     })
 
+    describe('Minus', () => {
+        it("Input 1plus2plus3plus4 should be 2", () => {
+            const expected = "2"
+            const text = "1plus2plus3minus4"
+
+            const actual = addition(text)
+
+            expect(actual).toEqual(expected)
+        })
+    })
+
     describe('Split', () => {
         it('Split string 1plus2plus3plus4 shoud be array number', () => {
             const expected = [1, 2, 3, 4]
