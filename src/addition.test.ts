@@ -1,4 +1,4 @@
-import addition, { splitTextToNumber } from './addition'
+import addition, { splitTextToNumber,splitTextToOpertor } from './addition'
 describe('Name of the group', () => {
 
     describe('Addition', () => {
@@ -18,6 +18,14 @@ describe('Name of the group', () => {
             const text = "1plus2plus3plus4"
 
             const actual = splitTextToNumber(text)
+
+            expect(actual).toEqual(expected)
+        });
+        it('Split string 1plus2plus3plus4 shoud be array operator', () => {
+            const expected = ["plus", "plus", "plus"]
+            const text = "1plus2plus3plus4"
+
+            const actual = splitTextToOpertor(text)
 
             expect(actual).toEqual(expected)
         });
