@@ -22,6 +22,11 @@ $ npm install -s typescript
 $ npm install --save-dev jest-cli @types/jest
 ```
 
+## install jest
+```
+$ npm install -d ts-jest
+```
+
 ## init tsconfig
 ```
 add tsc infile package.json
