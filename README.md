@@ -9,17 +9,17 @@
 
 ## init package
 ```
-npm init
+$ npm init
 ```
 
 ## install typescript
 ```
-npm install -s typescript
+$ npm install -s typescript
 ```
 
 ## install jest cli
 ```
-npm install --save-dev jest-cli @types/jest
+$ npm install --save-dev jest-cli @types/jest
 ```
 
 ## init tsconfig
@@ -33,6 +33,9 @@ add tsc infile package.json
     },
     ...
 }
+
+generate file tsconfig.json
+$ npm run tsc -- --init
 
 uncomment and set path file tsconfig.json
 
