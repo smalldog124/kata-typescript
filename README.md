@@ -51,6 +51,7 @@ uncomment and set path file tsconfig.json
 ## config jest ให้ใช้กับ typscrip
 
 ```
+ไฟล์ package.json
     ...
     "jest": {
     "roots": [
